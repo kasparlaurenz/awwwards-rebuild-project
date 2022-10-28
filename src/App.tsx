@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-import { render } from 'react-dom';
+import { useEffect, useRef } from 'react';
 import './App.css';
 import cityVideo from './assets/video_1.mp4';
 import useIsScrolled from './hooks/useIsScrolled';
@@ -24,32 +23,27 @@ function App() {
       if (renderingCtx) {
         renderingCtx.globalCompositeOperation = 'source-over';
         renderingCtx.fillStyle = '#000000';
-        renderingCtx.fillRect(
-          0,
-          0,
-          windowSize.width + 2,
-          windowSize.height + 10
-        );
+        renderingCtx.fillRect(0, 0, windowSize.width, windowSize.height);
 
-        renderingElement.addEventListener('mouseover', e => {
+        renderingElement.addEventListener('mouseover', (e: MouseEvent) => {
           moving = true;
           lastX = e.pageX - renderingElement!.offsetLeft;
           lastY = e.pageY - renderingElement!.offsetTop;
         });
 
-        renderingElement.addEventListener('click', e => {
+        renderingElement.addEventListener('click', (e: MouseEvent) => {
           moving = true;
           lastX = e.pageX - renderingElement!.offsetLeft;
           lastY = e.pageY - renderingElement!.offsetTop;
         });
 
-        renderingElement.addEventListener('mouseup', e => {
+        renderingElement.addEventListener('mouseup', (e: MouseEvent) => {
           moving = false;
           lastX = e.pageX - renderingElement!.offsetLeft;
           lastY = e.pageY - renderingElement!.offsetTop;
         });
 
-        renderingElement.addEventListener('mousemove', e => {
+        renderingElement.addEventListener('mousemove', (e: MouseEvent) => {
           if (moving) {
             if (renderingElement && drawingCtx && renderingCtx) {
               drawingCtx.globalCompositeOperation = 'source-over';

@@ -5,7 +5,10 @@ const useWindowSize = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   });
-  const [windowSize, setWindowSize] = useState(getSize);
+  const [windowSize, setWindowSize] = useState<{
+    width: number;
+    height: number;
+  }>(getSize);
 
   useEffect(() => {
     const handleResize = () => {
