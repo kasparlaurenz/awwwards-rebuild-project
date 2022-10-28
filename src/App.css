@@ -1,0 +1,45 @@
+.app {
+  width: 100%;
+  height: auto;
+}
+
+video {
+  transform: scale(0.994);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: all 1.2s ease-in-out;
+}
+
+.video.scrolled {
+  filter: grayscale(100%) blur(2px);
+}
+
+h1 {
+  pointer-events: none;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+  position: absolute;
+  font-size: 20rem;
+  bottom: -630px;
+  line-height: 17rem;
+  text-transform: lowercase;
+}
+span {
+  pointer-events: none;
+  transition: all 1.2s ease-in-out;
+}
+.herz {
+  color: rgb(233, 49, 49);
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+}

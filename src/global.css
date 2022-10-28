@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  cursor: none;
+}
+
+body {
+  background-color: rgb(26, 26, 26);
+  color: rgb(243, 243, 243);
+  font-family: sans-serif;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 400px;
+  left: 400px;
+  pointer-events: none;
+  z-index: 999;
+  background-color: rgb(233, 49, 49);
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  transition: all 0.15s ease-in-out;
+  transition-property: width, height, border;
+  will-change: width, height, transform, border;
+}
